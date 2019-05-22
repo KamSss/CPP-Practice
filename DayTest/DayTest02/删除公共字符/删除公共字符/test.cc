@@ -29,8 +29,10 @@ void test(string str1,string str2){
 }
 
 int main(){
-	string str1 = "They are students.";
-	string str2 = "aeiou";
+	string str1;
+	string str2;
+	getline(cin, str1);
+	getline(cin, str2);
 	//string str1 = "abcd acc";
 	//string str2 = "cd";
 	test(str1, str2);
