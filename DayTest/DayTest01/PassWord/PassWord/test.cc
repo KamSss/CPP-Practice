@@ -1,5 +1,5 @@
 #include<iostream>
-#include<string.h>
+#include<string>
 
 using namespace std;
 
@@ -97,8 +97,7 @@ int reward(string s){
 	return 0;
 }
 
-void GetPwdSecurityLevel(){
-	string pPasswordStr;
+void GetPwdSecurityLevel(string pPasswordStr){
 	int ret1 = length(pPasswordStr);
 	int ret2 = letter(pPasswordStr);
 	int ret3 = number(pPasswordStr);
@@ -130,6 +129,10 @@ void GetPwdSecurityLevel(){
 }
 
 int main(){
-	GetPwdSecurityLevel();
+	string pPasswordStr;
+	getline(cin, pPasswordStr);
+	GetPwdSecurityLevel(pPasswordStr);
+
+	system("pause");
 	return 0;
 }
