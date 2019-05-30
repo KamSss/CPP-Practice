@@ -8,7 +8,7 @@ using namespace std;
 class Solution {
 public:
 	int StrToInt(string str) {
-		if (str.empty)
+		if (str.empty())
 			return 0;
 		int symbol = 1;
 		if (str[0] == '-'){
