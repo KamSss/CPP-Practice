@@ -1,0 +1,26 @@
+class Gloves {
+public:
+    int findMinimum(int n, vector<int> left, vector<int> right) {
+        // write code here
+        int lnum = 0;
+        int rnum = 0;
+        int zerolnum = 0;
+        int zerornum = 0;
+        // 如果有一种颜色手套的一边为0只，那另一边的此颜色手套必须拿完
+        for(int i = 0;i < n;i++){
+            if(left[i] == 0){
+                rnum += right[i];
+                zerolnum++;
+            }
+            if(right[i] == 0){
+                lnum += left[i];
+                zerornum++;
+            }
+        }
+        // 内部冠军 外部冠军
+        int neibu = 0;
+        for(int j = 0;j < n;j++){
+            for(int k = 0;k < n;k++){
+        }
+    }
+};
