@@ -1,0 +1,17 @@
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+int main(){
+	string str;
+	while (getline(cin, str)){
+		string ret;
+		for (size_t i = str.size() - 1; i > 0; i--){
+			ret.push_back(str[i]);
+		}
+		ret.push_back(str[0]);
+		cout << ret << endl;
+	}
+	return 0;
+}
