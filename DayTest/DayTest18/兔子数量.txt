@@ -1,0 +1,19 @@
+#include<iostream>
+
+using namespace std;
+
+int RobbitNum(int month){
+    if(month <= 2){
+        return 1;
+    }
+    return RobbitNum(month - 1) + RobbitNum(month - 2);
+}
+
+int main(){
+    int month = 0;
+    while(cin >> month){
+        int num = RobbitNum(month);
+        cout << num << endl;
+    }
+    return 0;
+}
