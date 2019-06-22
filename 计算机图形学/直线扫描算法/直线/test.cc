@@ -32,7 +32,7 @@ void MidPLine(int x1, int y1, int x2, int y2){
 
 int main(){
 	initgraph(680, 480);
-	MidPLine(300, 100, 400, 400);
+	MidPLine(000, 000, 400, 300);
 	_getch();
 	closegraph();
 	system("pause");
