@@ -3,27 +3,17 @@
 #include <GL/glut.h>
 
 GLint winWidth = 600, winHeight = 600; //设置初始化窗口大小
-
 /* 观察坐标系参数设置*/
-
 GLfloat x0 = 0.0, y0 = 0.0, z0 = 5.0; // 设置观察坐标系原点
-
 GLfloat xref = 0.0, yref = 0.0, zref = 0.0; //设置观察坐标系参考点（视点）
-
 GLfloat Vx = 0.0, Vy = 1.0, Vz = 0.0; // 设置观察坐标系向上向量（y轴）
-
 /*观察体（视见体）参数设置 */
-
 GLfloat xwMin = -1.0, ywMin = -1.0, xwMax = 1.0, ywMax = 1.0;//设置裁剪窗口坐标范围
-
 GLfloat dnear = 1.5, dfar = 20.0;//设置远、近裁剪面深度范围
 
 void init(void)
-
 {
-
 	glClearColor(1.0, 1.0, 1.0, 0.0);
-
 	//glShadeModel (GL_FLAT);//xz
 
 	/*①观察变换*/
@@ -51,12 +41,10 @@ void init(void)
 }
 
 void displayFcn(void)
-
 {
-
 	glClear(GL_COLOR_BUFFER_BIT);
 
-	glColor3f(0.0, 1.0, 0.0); // 设置前景色为绿色
+	glColor3f(0.0, 2.0, 0.0); // 设置前景色为绿色
 
 	glutSolidCube(1.0);//绘制单位立方体实体
 
@@ -71,9 +59,7 @@ void displayFcn(void)
 }
 
 void reshapeFcn(GLint newWidth, GLint newHeight)
-
 {
-
 	/*③视口变换 */
 
 	glViewport(0, 0, newWidth, newHeight);//定义视口大小
@@ -85,9 +71,7 @@ void reshapeFcn(GLint newWidth, GLint newHeight)
 }
 
 void main(int argc, char** argv)
-
 {
-
 	glutInit(&argc, argv);
 
 	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
