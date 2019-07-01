@@ -1,5 +1,5 @@
 #include<iostream>
-#include<vector>
+#include<string>
 
 using namespace std;
 
@@ -14,18 +14,18 @@ int bitdig(int x){
 	}
 	return sum;
 }
+
 int main(){
-	vector<int> n;
-	vector<int> ret;
-	int i = 0;
-	while (cin >> n[i]){
-		i++;
-	}
-	for (int j = 0; j < n.size(); j++){
-		ret[j] = bitdig(n[j]);
-	}
-	for (int j = 0; j < n.size(); j++){
-		cout << ret[j];
+	string n;
+	while (cin >> n){
+		int m = 0;
+		for (int i = 0; i < n.size(); i++){
+			m += n[i] - '0';
+		}
+		if(m > 9){
+			m = bitdig(m);
+		}
+		cout << m << endl;
 	}
 	return 0;
 }
