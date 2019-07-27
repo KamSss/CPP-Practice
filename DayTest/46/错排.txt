@@ -1,0 +1,17 @@
+#include <iostream>
+#include <cstdio>
+
+int main()
+{
+  long long d[22] = { 0, 0, 1 }; // 错排数量，预留第一项为0，配合下文中输入的n
+  for (int i = 3; i < 22; i++)
+  {
+    d[i] = (i - 1) * (d[i - 1] + d[i - 2]); //错排的递推公式
+  }
+  int n;
+  while (std::cin >> n)
+  {
+    printf("%lld\n",d[n]);
+  }
+  return 0;
+}
