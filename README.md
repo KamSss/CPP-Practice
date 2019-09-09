@@ -69,3 +69,7 @@ int main(){
 3.类型：类类型* const 意味着不能给this指针赋值
 4.只能在成员函数内部使用
 5.this指针存在栈上
+
+
+### const：
+https://www.cnblogs.com/dhls231/p/Const.html
