@@ -72,4 +72,7 @@ int main(){
 
 
 ### const：
+1.在成员函数后面加const，const修饰this指针所指向的对象，也就是保证调用这个const成员函数的对象在函数内不会被改变
+2.const对象可以调用其他的const函数，const成员函数内可以调用其他const成员函数。
+3.非const对象可以调用其他非const成员函数和const成员函数，非const成员函数内可以调用其他非const成员函数和const成员函数。
 https://www.cnblogs.com/dhls231/p/Const.html
