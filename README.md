@@ -92,3 +92,36 @@ https://www.cnblogs.com/dhls231/p/Const.html
 ### 什么是内部类：
 一个类定义在一个类内部，就是内部类，内部类是外部类的友元类，具有友元类的一切特性，但是外部类不是内部类的友元
 sizeof(外部类)=外部类，和内部类大小无关
+
+### C/C++内存区域划分：
+1.栈又叫堆栈，非静态局部变量/函数参数/返回值等等，栈是向下增长的。
+2.内存映射段是高效的I/O映射方式，用于装载一个共享的动态内存库。用户可使用系统接口创建共享共享内存，做进程间通信。
+3.堆用于程序运行时动态内存分配，堆是可以上增长的。
+4.数据段–存储全局数据和静态数据。//多数地方叫作全局数据区或者静态区。
+5.代码段–可执行的代码/只读常量。
+
+### C语言内存管理：
+malloc
+calloc：申请空间，按字节初始化为0
+realloc：1.原始空间如果小于申请的空间，并且原始空间有富裕的空间满足，直接修改底层标记信息，否则重新申请一块更大的空间，拷贝原有空间的内容，释放原有空间。
+2.原始空间大于重新申请的空间，直接修改底层标记信息。
+
+### C++的new和delete：
+1.在申请自定义类型的空间时，new会调用构造函数，delete会调用析构函数，malloc和free不会
+2.申请释放单个空间，用new和delete，申请释放连续的空间，用new[]和delete[]。
+3.new是先执行operator new申请空间，然后调用构造函数初始化对象。
+4.delete是先调用析构函数完成对象的资源清理工作，然后调用operator delete释放空间。
+
+### new和delete的底层：
+1.new和delete是操作符，而operator new和operator delete是系统底层提供的全局函数，new和delete底层调用这两个全局函数申请和释放内存。
+2.operator new和operator delete底层调用malloc和free。
+3.operator new调用malloc申请空间，成功了就直接返回，申请失败就执行用户提供的空间不足应对措施，如果用户提供该措施就继续申请，如果不提供就抛异常bad_alloc
+
+### new[] 和 delete[] 的原理：
+1.new[]底层调用operator new[]，而operator new[]实际调用operator new完成N个空间的申请，然后调用N次构造函数完成初始化。
+2.delete[]调用N次析构函数完成N个对象的资源清理，然后底层调用operator delete[]，实际operator delete[]调用operator delete完成N个空间的释放。
+
+### malloc/free和new/delete的区别：
+1.new/delete是操作符可以重载，malloc/free是库函数。
+2.new/delete调用构造函数/析构函数，malloc/free不会。
+
