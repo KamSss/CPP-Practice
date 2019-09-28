@@ -5,31 +5,31 @@
 ### 三.[内存管理](#ncgl)
 
 #### 1.<span id="rm">入门</span>
-1.函数重载
-2.extern "C"
-3.引用
-4.inline和宏
-5.封装
+- 函数重载
+- extern "C"
+- 引用
+- inline和宏
+- 封装
 
 #### 2.<span id="lhdx">类和对象：</span>
-1.构造函数、初始化列表、默认构造函数
-2.拷贝构造无限递归    
-3.class和struct
-4.类的大小计算、内存对齐问题
-5.大小端问题
-6.this指针问题
-7.const成员函数
-8.static成员
-9.友元函数、友元类
-10.内部类
+- 构造函数、初始化列表、默认构造函数
+- 拷贝构造无限递归    
+- class和struct
+- 类的大小计算、内存对齐问题
+- 大小端问题
+- this指针问题
+- const成员函数
+- static成员
+- 友元函数、友元类
+- 内部类
 
 #### 3.<span id="ncgl">内存管理：</span>
-1.C/C++内存分布
-2.C语言内存管理
-3.C++的new和delete
-4.new和delete的底层
-5.new[]和delete[]的原理
-6.malloc/new 和 free/delete区别
+- C/C++内存分布
+- C语言内存管理
+- C++的new和delete
+- new和delete的底层
+- new[]和delete[]的原理
+- malloc/new 和 free/delete区别
 
 ### 函数重载：
 同一作用域内，允许声明几个同名函数，它们的形参列表必须不同（参数个数、类型或顺序）
