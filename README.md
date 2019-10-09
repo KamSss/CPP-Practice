@@ -1,8 +1,9 @@
-## CPP-Practice
+## CPP-自我总结
 
 ### 一.[入门](#rm)
 ### 二.[类和对象](#lhdx)
 ### 三.[内存管理](#ncgl)
+### 四.[STL](#stl)
 
 #### 1.<span id="rm">入门</span>
 - 函数重载
@@ -30,6 +31,10 @@
 - new和delete的底层
 - new[]和delete[]的原理
 - malloc/new 和 free/delete区别
+
+#### 1.<span id="stl">STL</span>
+- 六大组件 
+- STL缺点
 
 ### 函数重载：
 同一作用域内，允许声明几个同名函数，它们的形参列表必须不同（参数个数、类型或顺序）
@@ -262,3 +267,15 @@ ap本质是转移管理权，当对象拷贝或者赋值之后，ap会把管理�
 2.C的next指向D，D的prev指向C，引用计数为2
 3.现在要释放A和B，释放A就要释放成员C，但是C指向D也就要释放B的成员D，而B释放也需要释放D的prev也就是C，这样就死循环了，谁都等对方释放。
 解决：weak_ptr：比如两个shared_ptr互相引用的话，引用计数永远都不会为0，为了防止这种死循环的情况，将其中一个shared_ptr声明成weak_ptr，可以解决。
+
+### STL六大组件：
+仿函数：greater、less
+容器：string、vector、list、deque、map、set
+迭代器：iterator
+算法：find()、swap()、sort()、reverse()
+配接器：stack、queue、priority_queue
+空间配置器：allocator
+
+### STL缺点：
+1.不支持线程安全，需要自己加锁
+2.极致追求效率，导致内部结构复杂，比如类型萃取
