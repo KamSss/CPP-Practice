@@ -1,0 +1,10 @@
+{
+  "version": "0.2.1",
+  "tasks": [
+    {
+      "taskLabel": "任务-大小端判断",
+      "appliesTo": "大小端判断.cpp",
+      "type": "launch"
+    }
+  ]
+}
